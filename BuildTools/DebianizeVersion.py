@@ -10,4 +10,4 @@ version = version.replace("rc", "~rc")
 version = version.replace("alpha", "~alpha")
 version = version.replace("-dev", "+dev")
 
-print version
+print(version)
