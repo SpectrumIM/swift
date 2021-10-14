@@ -7,6 +7,7 @@
 #include <Swift/QtUI/Roster/GroupItemDelegate.h>
 
 #include <QPainter>
+#include <QPainterPath>
 #include <QPen>
 #include <QtDebug>
 
