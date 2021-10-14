@@ -54,8 +54,6 @@ else
 	else
 		find $DIRNAME/3rdParty -type f | grep -v uuid | grep -v SConscript | grep -v miniupnp | grep -v natpmp || xargs rm -f
 	fi
-	find $DIRNAME/3rdParty -depth -empty -type d -exec rmdir {} \;
-	rm -rf $DIRNAME/3rdParty/SCons
 	rm -rf $DIRNAME/Swift/Packaging/Debian
 	rm -rf $DIRNAME/BuildTools/DocBook/Fonts
 	rm -rf $DIRNAME/BuildTools/Git/Hooks/commit-msg

@@ -14,14 +14,14 @@ SWIFT_INSTALLDIR=$(SCONS_INSTALL_BASE)/usr SWIFTEN_INSTALLDIR=$(SCONS_INSTALL_BA
 
 override_dh_clean:
 	dh_clean
-	scons $(SCONS_FLAGS) $(SCONS_EXTRA_FLAGS) $(SCONS_INSTALL_FLAGS) -c
+	python2 ../../../../3rdParty/SCons/scons-2.4.0/script/scons $(SCONS_FLAGS) $(SCONS_EXTRA_FLAGS) $(SCONS_INSTALL_FLAGS) -c
 	-rm -rf .scon*
 	-rm -rf config.log
 
 override_dh_configure:
 
 override_dh_auto_build:
-	scons $(SCONS_FLAGS) $(SCONS_EXTRA_FLAGS) Swift Swiften debian/swift-im.1 debian/swiften-config.1
+	python2 ../../../../3rdParty/SCons/scons-2.4.0/script/scons $(SCONS_FLAGS) $(SCONS_EXTRA_FLAGS) Swift Swiften debian/swift-im.1 debian/swiften-config.1
 
 override_dh_auto_install:
-	scons $(SCONS_FLAGS) $(SCONS_EXTRA_FLAGS) $(SCONS_INSTALL_FLAGS) $(SCONS_INSTALL_BASE)
+	python2 ../../../../3rdParty/SCons/scons-2.4.0/script/scons $(SCONS_FLAGS) $(SCONS_EXTRA_FLAGS) $(SCONS_INSTALL_FLAGS) $(SCONS_INSTALL_BASE)
