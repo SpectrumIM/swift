@@ -8,6 +8,7 @@
 
 #include <openssl/pem.h>
 #include <openssl/err.h>
+#include <limits>
 
 namespace Swift {
 
