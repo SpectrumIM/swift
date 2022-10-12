@@ -427,7 +427,7 @@ env["TEST_CREATE_LIBRARIES"] = "create_test_libraries" in ARGUMENTS
 
 # Packaging
 env["DIST"] = "dist" in ARGUMENTS or env.GetOption("clean")
-for path in ["SWIFT_INSTALLDIR", "SWIFTEN_INSTALLDIR", "SLUIFT_INSTALLDIR"] :
+for path in ["SWIFT_INSTALLDIR", "SWIFTEN_INSTALLDIR", "SLUIFT_INSTALLDIR", "SWIFTEN_LIBINSTALLDIR"] :
     if ARGUMENTS.get(path, "") :
         if os.path.isabs(ARGUMENTS[path]) :
             env[path] = Dir(ARGUMENTS[path]).abspath
