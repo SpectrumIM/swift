@@ -11,6 +11,9 @@
 #include <Swiften/Queries/GenericRequest.h>
 #include <Swiften/Queries/IQRouter.h>
 
+#include <boost/bind/placeholders.hpp>
+using namespace boost::placeholders;
+
 namespace Swift {
 
 MIXImpl::MIXImpl(const JID& ownJID, const JID& channelJID, IQRouter* iqRouter) : ownJID_(ownJID), channelJID_(channelJID), iqRouter_(iqRouter) {

@@ -10,6 +10,7 @@
 #include <unordered_set>
 
 #include <boost/optional.hpp>
+#include <algorithm>
 
 #include <Swiften/Base/API.h>
 #include <Swiften/Elements/Payload.h>
