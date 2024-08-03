@@ -43,7 +43,7 @@ MiniUPnPInterface::MiniUPnPInterface() : p(new Private()) {
     }
 
     char lanAddress[64];
-    if (!UPNP_GetValidIGD(p->deviceList, &p->urls, &p->data, lanAddress, sizeof(lanAddress))) {
+    if (!UPNP_GetValidIGD(p->deviceList, &p->urls, &p->data, lanAddress, sizeof(lanAddress), nullptr, 0)) {
         return;
     }
     p->localAddress = std::string(lanAddress);
