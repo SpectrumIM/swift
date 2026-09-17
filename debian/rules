@@ -19,9 +19,6 @@ SCONS_FLAGS=V=1 qt5=1 optimize=1 debug=1 allow_warnings=1 swiften_dll=1 \
 
 # kept for now: line required to detect lua: lua_includedir="/usr/include/lua5.1" lua_libname="lua5.1" \
 
-# It get's it own version wrong… #1024553. (needs also fix-version-h.patch)
-export SWIFTEN_VERSION=$(DEB_VERSION_UPSTREAM)
-
 SCONS_INSTALL_BASE=$(CURDIR)/debian/tmp
 SCONS_INSTALL_FLAGS=SWIFT_INSTALLDIR=$(SCONS_INSTALL_BASE)/usr \
         SWIFTEN_INSTALLDIR=$(SCONS_INSTALL_BASE)/usr \
@@ -36,7 +33,6 @@ endif
 
 override_dh_auto_build:
 	mkdir -p $(HOME)
-	echo $(DEB_UPSTREAM_VERSION) > VERSION.swift
 	scons $(DEB_BUILD_OPTION_PARALLEL:%=--jobs=%) $(SCONS_FLAGS) Swiften
 
 override_dh_auto_install:
