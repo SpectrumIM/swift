@@ -1,0 +1,80 @@
+name: build-debs
+
+on:
+  push:
+    branches: [swiften5_debian]
+    paths: ['.github/workflows/build-debs.yml']
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: amd64
+            runs-on: ubuntu-24.04
+          - arch: arm64
+            runs-on: ubuntu-24.04-arm
+    runs-on: ${{ matrix.runs-on }}
+    timeout-minutes: 60
+    name: swift-im trixie ${{ matrix.arch }}
+    steps:
+      - name: Install host tools
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends debootstrap
+      - name: Bootstrap trixie ${{ matrix.arch }} chroot
+        run: |
+          sudo debootstrap --arch=${{ matrix.arch }} --variant=minbase \
+            --include=ca-certificates \
+            trixie /chroot-trixie-${{ matrix.arch }} \
+            http://ftp.de.debian.org/debian
+      - name: Build swift-im
+        run: |
+          set -euxo pipefail
+          sudo chroot /chroot-trixie-${{ matrix.arch }} /bin/bash -s <<'BUILD'
+          set -euxo pipefail
+          export DEBIAN_FRONTEND=noninteractive
+          export DEB_BUILD_OPTIONS=nocheck
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            git git-buildpackage devscripts build-essential fakeroot equivs
+          git clone --branch swiften5_debian --single-branch \
+            https://github.com/SpectrumIM/swift.git /tmp/swift-im-src
+          cd /tmp/swift-im-src
+          mk-build-deps --install --remove \
+            --tool "apt-get -y --no-install-recommends" debian/control
+          gbp buildpackage --git-ignore-branch --git-ignore-new --git-upstream-tree=HEAD -sa -us -uc
+          BUILD
+          sudo mkdir -p /tmp/swift-im-debs
+          sudo cp /chroot-trixie-${{ matrix.arch }}/tmp/*.deb \
+                  /chroot-trixie-${{ matrix.arch }}/tmp/*.dsc \
+                  /chroot-trixie-${{ matrix.arch }}/tmp/*.changes \
+                  /chroot-trixie-${{ matrix.arch }}/tmp/*.buildinfo \
+                  /chroot-trixie-${{ matrix.arch }}/tmp/*.tar.* \
+                  /tmp/swift-im-debs/
+      - name: Verify ${{ matrix.arch }} packages
+        run: |
+          set -euxo pipefail
+          for deb in /tmp/swift-im-debs/*.deb; do
+            test -f "$deb"
+            dpkg-deb -f "$deb" Package Version Architecture
+            test "$(dpkg-deb -f "$deb" Architecture)" = "${{ matrix.arch }}"
+          done
+          for dsc in /tmp/swift-im-debs/*.dsc; do
+            test -f "$dsc"
+          done
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: swift-im-trixie-${{ matrix.arch }}-debs
+          path: |
+            /tmp/swift-im-debs/*.deb
+            /tmp/swift-im-debs/*.dsc
+            /tmp/swift-im-debs/*.changes
+            /tmp/swift-im-debs/*.buildinfo
+            /tmp/swift-im-debs/*.tar.*
+          if-no-files-found: error
+          retention-days: 14
