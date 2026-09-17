@@ -20,7 +20,7 @@ if m :
 if project == "" :
     project="swift-im"
 
-if "dev" in version or "alpha" in version :
+if "dev" in version :
     distribution = "development"
 elif "beta" in version or "rc" in version :
     distribution = "beta development"
@@ -38,3 +38,4 @@ if last_version != version :
     changelog.write("\n")
     changelog.write(changelog_data)
     changelog.close()
+
