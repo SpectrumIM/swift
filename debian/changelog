@@ -1,3 +1,10 @@
+swift-im (5.0~alpha2.152.g30a4a8f46+dfsg-1) unstable; urgency=medium
+
+  * debian/rules: drop broken SWIFTEN_VERSION override, use upstream
+    git-describe versioning.
+
+ -- Vitaly Takmazov <vitalyster@gmail.com>  Thu, 17 Sep 2026 09:16:11 +0000
+
 swift-im (5.0~alpha2.145.g12d031cf8+dfsg-5) unstable; urgency=medium
 
   * d/rules: use DEB_BUILD_OPTION_PARALLEL instead nproc (Closes: #1109963)
