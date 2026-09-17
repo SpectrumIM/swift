@@ -1,0 +1,556 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Swift
+Upstream-Contact: https://swift.im/
+Source: https://swift.im/git/swift/
+Files-Excluded:
+ 3rdParty
+ BuildTools/DocBook/Fonts
+ Swift/Packaging/MacOSX/Swift.dmg.gz
+ Swift/resources/themes/Default/Lato2OFL
+
+Files: *
+Copyright: 2009-2019 Isode Limited.
+           2014 Edwin Mons and Isode Limited
+License: GPL-3_with_OpenSSL_exception
+
+Files: BuildTools/Git/Hooks/commit-msg
+Copyright: Copyright (C) 2009 The Android Open Source Project
+Comment: From Gerrit Code Review 2.4.2.
+License: Apache-2.0
+
+Files: BuildTools/SCons/Tools/InstallWithSymLinks.py BuildTools/SCons/Tools/qt4.py
+Copyright: 2001-2015 The SCons Foundation
+License: Expat
+
+Files: BuildTools/scons2ninja.py
+Copyright: 2013 Remko Tronçon
+License: BSD-2-clause
+
+Files: QA/Checker/CppUnitTestResultPrinter.*
+Copyright: 2005 Google Inc.
+           2017 Isode Limited.
+License: GPL-3_with_OpenSSL_exception AND BSD-3-clause
+
+Files: SwifTools/LastLineTracker.h SwifTools/UnitTest/LastLineTrackerTest.cpp
+       Swift/Controllers/UIEvents/RequestBlockListDialogUIEvent.h
+       Swift/QtUI/QtResourceHelper.cpp
+       Swift/Controllers/ContactProvider.cpp
+       Swift/QtUI/QtSpellCheckerWindow.h
+       Swift/Controllers/UIInterfaces/HistoryWindowFactory.h
+       Swift/QtUI/Roster/RosterTooltip.h
+       Swift/QtUI/QtResourceHelper.h
+       Swift/Controllers/UIEvents/RequestFileTransferListUIEvent.h
+       Swift/Controllers/UIEvents/RequestHighlightEditorUIEvent.h
+       Swift/Controllers/UIInterfaces/FileTransferListWidget.h
+       Swift/Controllers/UIEvents/RequestHistoryUIEvent.h
+       Swift/Controllers/UIInterfaces/BlockListEditorWidgetFactory.h
+       Swift/Controllers/UIInterfaces/HighlightEditorWidgetFactory.h
+       Swift/Controllers/UIInterfaces/HighlightEditorWidget.h
+       Swift/QtUI/UserSearch/ContactListDelegate.h
+       Swift/QtUI/QtCertificateViewerDialog.h
+       Swift/QtUI/QtVCardWidget/QtRemovableItemDelegate.h
+       Swift/QtUI/QtFormResultItemModel.h
+       Swiften/Elements/ClientState.h
+       Swiften/Elements/MIXCreate.h
+       Swiften/Elements/MIXDestroy.h
+       Swiften/Elements/MIXJoin.h
+       Swiften/Elements/MIXLeave.h
+       Swiften/Elements/MIXParticipant.h
+       Swiften/Elements/MIXPayload.h
+       Swiften/Elements/MIXRegisterNick.h
+       Swiften/Elements/MIXSetNick.h
+       Swiften/Elements/MIXUpdateSubscription.h
+       Swiften/Elements/MIXUserPreference.h
+       Swiften/Elements/Whiteboard/WhiteboardColor.h
+       Swiften/Elements/Whiteboard/WhiteboardElementVisitor.h
+       Swiften/MIX/MIX.cpp
+       Swiften/MIX/MIX.h
+       Swiften/MIX/MIXImpl.cpp
+       Swiften/MIX/UnitTest/MIXImplTest.cpp
+       Swiften/Network/ConnectionServerFactory.cpp
+       Swiften/Network/GConfProxyProvider.h
+       Swiften/Network/NATTraversalForwardPortRequest.cpp
+       Swiften/Network/NATTraversalGetPublicIPRequest.cpp
+       Swiften/Network/NATTraversalRemovePortForwardingRequest.cpp
+       Swiften/Network/PlatformNetworkEnvironment.h
+       Swiften/Network/PlatformProxyProvider.h
+       Swiften/Parser/PayloadParsers/ClientStateParser.cpp
+       Swiften/Parser/PayloadParsers/ClientStateParser.h
+       Swiften/Parser/PayloadParsers/DeliveryReceiptParser.cpp
+       Swiften/Parser/PayloadParsers/DeliveryReceiptRequestParser.cpp
+       Swiften/Parser/PayloadParsers/IdleParser.cpp
+       Swiften/Parser/PayloadParsers/MIXCreateParser.cpp
+       Swiften/Parser/PayloadParsers/MIXDestroyParser.cpp
+       Swiften/Parser/PayloadParsers/MIXJoinParser.cpp
+       Swiften/Parser/PayloadParsers/MIXJoinParserFactory.h
+       Swiften/Parser/PayloadParsers/MIXLeaveParser.cpp
+       Swiften/Parser/PayloadParsers/MIXParticipantParser.cpp
+       Swiften/Parser/PayloadParsers/MIXParticipantParserFactory.h
+       Swiften/Parser/PayloadParsers/MIXParticipantParser.h
+       Swiften/Parser/PayloadParsers/MIXPayloadParser.cpp
+       Swiften/Parser/PayloadParsers/MIXRegisterNickParser.cpp
+       Swiften/Parser/PayloadParsers/MIXRegisterNickParserFactory.h
+       Swiften/Parser/PayloadParsers/MIXRegisterNickParser.h
+       Swiften/Parser/PayloadParsers/MIXSetNickParser.cpp
+       Swiften/Parser/PayloadParsers/MIXUpdateSubscriptionParser.cpp
+       Swiften/Parser/PayloadParsers/MIXUserPreferenceParser.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/ClientStateParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXCreateParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXDestroyParser.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXDestroyParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXJoinParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXLeaveParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXParticipantParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXPayloadParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXRegisterNickParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXSetNickParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXUpdateSubscriptionParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/MIXUserPreferenceParserTest.cpp
+       Swiften/Parser/PayloadParsers/UnitTest/RosterItemExchangeParserTest.cpp
+       Swiften/Serializer/PayloadSerializers/ClientStateSerializer.cpp
+       Swiften/Serializer/PayloadSerializers/ClientStateSerializer.h
+       Swiften/Serializer/PayloadSerializers/MIXCreateSerializer.cpp
+       Swiften/Serializer/PayloadSerializers/MIXDestroySerializer.cpp
+       Swiften/Serializer/PayloadSerializers/MIXJoinSerializer.cpp
+       Swiften/Serializer/PayloadSerializers/MIXLeaveSerializer.cpp
+       Swiften/Serializer/PayloadSerializers/MIXParticipantSerializer.cpp
+       Swiften/Serializer/PayloadSerializers/MIXParticipantSerializer.h
+       Swiften/Serializer/PayloadSerializers/MIXPayloadSerializer.cpp
+       Swiften/Serializer/PayloadSerializers/MIXRegisterNickSerializer.cpp
+       Swiften/Serializer/PayloadSerializers/MIXRegisterNickSerializer.h
+       Swiften/Serializer/PayloadSerializers/MIXSetNickSerializer.cpp
+       Swiften/Serializer/PayloadSerializers/MIXUpdateSubscriptionSerializer.cpp
+       Swiften/Serializer/PayloadSerializers/MIXUserPreferenceSerializer.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/ClientStateSerializerTest.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/MIXCreateSerializerTest.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/MIXDestroySerializerTest.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/MIXJoinSerializerTest.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/MIXLeaveSerializerTest.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/MIXParticipantSerializerTest.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/MIXPayloadSerializerTest.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/MIXRegisterNickSerializerTest.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/MIXSetNickSerializerTest.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/MIXUpdateSubscriptionSerializerTest.cpp
+       Swiften/Serializer/PayloadSerializers/UnitTest/MIXUserPreferenceSerializerTest.cpp
+       Swiften/TLS/Schannel/SchannelCertificateFactory.h
+Copyright: 2011 Vlad Voicu
+           2011-2013 Tobias Markmann
+           2012 Catalin Badea
+           2012 Maciej Niedzielski
+           2012-2015 Mateusz Piękos
+           2011 Soren Dreijer
+           2015-2017 Tarun Gupta
+           2011 Jan Kaluza
+           2010-2011 Thilo Cestonaro
+License: BSD-2-clause
+
+Files: SwifTools/LastLineTracker.cpp
+       SwifTools/SpellParser.*
+       SwifTools/SpellChecker.h
+       SwifTools/SpellCheckerFactory.*
+       SwifTools/MacOSXChecker.*
+       SwifTools/HunspellChecker.*
+       SwifTools/UnitTest/SpellParserTest.cpp
+       Swift/Controllers/BlockListController.cpp
+       Swift/Controllers/BlockListController.h
+       Swift/Controllers/Chat/AutoAcceptMUCInviteDecider.h
+       Swift/Controllers/Contact.cpp
+       Swift/Controllers/Contact.h
+       Swift/Controllers/ContactProvider.h
+       Swift/Controllers/ContactsFromXMPPRoster.cpp
+       Swift/Controllers/ContactsFromXMPPRoster.h
+       Swift/Controllers/ContactSuggester.cpp
+       Swift/Controllers/ContactSuggester.h
+       Swift/Controllers/FileTransfer/FileTransferController.cpp
+       Swift/Controllers/FileTransfer/FileTransferController.h
+       Swift/Controllers/FileTransfer/FileTransferOverview.cpp
+       Swift/Controllers/FileTransfer/FileTransferOverview.h
+       Swift/Controllers/FileTransfer/FileTransferProgressInfo.cpp
+       Swift/Controllers/FileTransfer/FileTransferProgressInfo.h
+       Swift/Controllers/FileTransferListController.cpp
+       Swift/Controllers/FileTransferListController.h
+       Swift/Controllers/Highlighting/HighlightAction.cpp
+       Swift/Controllers/Highlighting/HighlightAction.h
+       Swift/Controllers/Highlighting/HighlightEditorController.cpp
+       Swift/Controllers/Highlighting/HighlightEditorController.h
+       Swift/Controllers/Highlighting/Highlighter.cpp
+       Swift/Controllers/Highlighting/Highlighter.h
+       Swift/Controllers/Highlighting/HighlightManager.cpp
+       Swift/Controllers/Highlighting/HighlightManager.h
+       Swift/Controllers/HistoryController.cpp
+       Swift/Controllers/HistoryController.h
+       Swift/Controllers/HistoryViewController.cpp
+       Swift/Controllers/HistoryViewController.h
+       Swift/Controllers/Roster/FuzzyRosterFilter.h
+       Swift/Controllers/Roster/ItemOperations/SetAvailableFeatures.h
+       Swift/Controllers/Roster/ItemOperations/SetBlockingState.h
+       Swift/Controllers/Roster/ItemOperations/SetVCard.h
+       Swift/Controllers/Roster/RosterVCardProvider.cpp
+       Swift/Controllers/Roster/RosterVCardProvider.h
+       Swift/Controllers/ShowProfileController.cpp
+       Swift/Controllers/ShowProfileController.h
+       Swift/Controllers/UIEvents/AcceptWhiteboardSessionUIEvent.h
+       Swift/Controllers/UIEvents/CancelWhiteboardSessionUIEvent.h
+       Swift/Controllers/UIEvents/CreateImpromptuMUCUIEvent.h
+       Swift/Controllers/UIEvents/InviteToMUCUIEvent.h
+       Swift/Controllers/UIEvents/RequestChangeBlockStateUIEvent.h
+       Swift/Controllers/UIEvents/RequestInviteToMUCUIEvent.h
+       Swift/Controllers/UIEvents/RequestWhiteboardUIEvent.h
+       Swift/Controllers/UIEvents/SendFileUIEvent.h
+       Swift/Controllers/UIEvents/ShowProfileForRosterItemUIEvent.h
+       Swift/Controllers/UIEvents/ShowWhiteboardUIEvent.h
+       Swift/Controllers/UIInterfaces/BlockListEditorWidget.h
+       Swift/Controllers/UIInterfaces/FileTransferListWidgetFactory.h
+       Swift/Controllers/UIInterfaces/HighlightEditorWindowFactory.h
+       Swift/Controllers/UIInterfaces/HistoryWindow.h
+       Swift/Controllers/UIInterfaces/WhiteboardWindowFactory.h
+       Swift/Controllers/UIInterfaces/WhiteboardWindow.h
+       Swift/Controllers/WhiteboardManager.cpp
+       Swift/Controllers/WhiteboardManager.h
+       Swift/Controllers/XMPPEvents/MUCInviteEvent.h
+       Swift/QtUI/ChatList/ChatListWhiteboardItem.cpp
+       Swift/QtUI/CocoaUIHelpers.h
+       Swift/QtUI/CocoaUIHelpers.mm
+       Swift/QtUI/QtBlockListEditorWindow.cpp
+       Swift/QtUI/QtBlockListEditorWindow.h
+       Swift/QtUI/QtCertificateViewerDialog.cpp
+       Swift/QtUI/QtChatWindowJSBridge.cpp
+       Swift/QtUI/QtChatWindowJSBridge.h
+       Swift/QtUI/QtColorToolButton.cpp
+       Swift/QtUI/QtColorToolButton.h
+       Swift/QtUI/QtFileTransferListItemModel.cpp
+       Swift/QtUI/QtFileTransferListItemModel.h
+       Swift/QtUI/QtFileTransferListWidget.cpp
+       Swift/QtUI/QtFileTransferListWidget.h
+       Swift/QtUI/QtFormResultItemModel.cpp
+       Swift/QtUI/QtHistoryWindow.cpp
+       Swift/QtUI/QtHistoryWindow.h
+       Swift/QtUI/QtProfileWindow.cpp
+       Swift/QtUI/QtProfileWindow.h
+       Swift/QtUI/QtSpellCheckerWindow.cpp
+       Swift/QtUI/QtVCardWidget/QtCloseButton.cpp
+       Swift/QtUI/QtVCardWidget/QtCloseButton.h
+       Swift/QtUI/QtVCardWidget/QtRemovableItemDelegate.cpp
+       Swift/QtUI/QtVCardWidget/QtResizableLineEdit.cpp
+       Swift/QtUI/QtVCardWidget/QtResizableLineEdit.h
+       Swift/QtUI/QtVCardWidget/QtTagComboBox.cpp
+       Swift/QtUI/QtVCardWidget/QtTagComboBox.h
+       Swift/QtUI/QtVCardWidget/QtVCardAddressField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardAddressField.h
+       Swift/QtUI/QtVCardWidget/QtVCardAddressLabelField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardAddressLabelField.h
+       Swift/QtUI/QtVCardWidget/QtVCardBirthdayField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardBirthdayField.h
+       Swift/QtUI/QtVCardWidget/QtVCardDescriptionField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardDescriptionField.h
+       Swift/QtUI/QtVCardWidget/QtVCardFieldInfo.h
+       Swift/QtUI/QtVCardWidget/QtVCardGeneralField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardGeneralField.h
+       Swift/QtUI/QtVCardWidget/QtVCardHomeWork.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardHomeWork.h
+       Swift/QtUI/QtVCardWidget/QtVCardInternetEMailField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardInternetEMailField.h
+       Swift/QtUI/QtVCardWidget/QtVCardJIDField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardJIDField.h
+       Swift/QtUI/QtVCardWidget/QtVCardOrganizationField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardOrganizationField.h
+       Swift/QtUI/QtVCardWidget/QtVCardPhotoAndNameFields.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardPhotoAndNameFields.h
+       Swift/QtUI/QtVCardWidget/QtVCardRoleField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardRoleField.h
+       Swift/QtUI/QtVCardWidget/QtVCardTelephoneField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardTelephoneField.h
+       Swift/QtUI/QtVCardWidget/QtVCardTitleField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardTitleField.h
+       Swift/QtUI/QtVCardWidget/QtVCardURLField.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardURLField.h
+       Swift/QtUI/QtVCardWidget/QtVCardWidget.cpp
+       Swift/QtUI/QtVCardWidget/QtVCardWidget.h
+       Swift/QtUI/Roster/QtFilterWidget.cpp
+       Swift/QtUI/Roster/QtFilterWidget.h
+       Swift/QtUI/Roster/RosterTooltip.cpp
+       Swift/QtUI/UserSearch/ContactListDelegate.cpp
+       Swift/QtUI/UserSearch/ContactListModel.cpp
+       Swift/QtUI/UserSearch/ContactListModel.h
+       Swift/QtUI/UserSearch/QtContactListWidget.cpp
+       Swift/QtUI/UserSearch/QtContactListWidget.h
+       Swift/QtUI/UserSearch/QtSuggestingJIDInput.cpp
+       Swift/QtUI/UserSearch/QtSuggestingJIDInput.h
+       Swift/QtUI/UserSearch/QtUserSearchFirstMultiJIDPage.cpp
+       Swift/QtUI/UserSearch/QtUserSearchFirstMultiJIDPage.h
+       Swift/QtUI/Whiteboard/ColorWidget.cpp
+       Swift/QtUI/Whiteboard/ColorWidget.h
+       Swift/QtUI/Whiteboard/FreehandLineItem.cpp
+       Swift/QtUI/Whiteboard/FreehandLineItem.h
+       Swift/QtUI/Whiteboard/GView.cpp
+       Swift/QtUI/Whiteboard/GView.h
+       Swift/QtUI/Whiteboard/QtWhiteboardWindow.cpp
+       Swift/QtUI/Whiteboard/QtWhiteboardWindow.h
+       Swift/QtUI/Whiteboard/TextDialog.cpp
+       Swift/QtUI/Whiteboard/TextDialog.h
+       Swift/QtUI/Whiteboard/WhiteboardElementDrawingVisitor.h
+       Swift/QtUI/WinUIHelpers.cpp
+       Swift/QtUI/WinUIHelpers.h
+Copyright:
+ 2011-2013 Vlad Voicu
+ 2011-2019 Isode Limited
+ 2011-2014 Tobias Markmann
+ 2012 Mateusz Piękos
+ 2012-2013 Catalin Badea
+ 2012 Maciej Niedzielski
+ 2011 Soren Dreijer
+ 2015-2017 Tarun Gupta
+ 2011 Jan Kaluza
+ 2010-2011 Thilo Cestonaro
+License: BSD-2-clause and GPL-3_with_OpenSSL_exception
+
+Files: Swift/QtUI/QtClosableLineEdit.*
+Copyright:
+ 2007 Trolltech ASA <info@trolltech.com>
+ 2014-2015 Isode Limited.
+License: Trolltech-Demo and GPL-3_with_OpenSSL_exception
+
+Files: Swift/QtUI/FlowLayout.cpp Swift/QtUI/FlowLayout.h
+Copyright: 2016 The Qt Company Ltd.
+License: BSD-3-clause
+
+Files: Swift/resources/themes/Default/Noto/*
+Copyright: Copyright 2013 Google Inc.
+License: OFL-1.1
+
+Files: debian/* Swift/Packaging/Debian/*
+Copyright: 2020 mirabilos <thorsten.glaser@teckids.org>
+           2023 Tobias Frost <tobi@debian.org>
+           Olly Betts <olly@survex.com>
+           the Swift project <packages@swift.im>
+           2010-2019 Isode Limited
+License: GPL-3_with_OpenSSL_exception
+
+License: GPL-3_with_OpenSSL_exception
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, version 3 of the License.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ On Debian systems /usr/share/common-licenses/GPL-3 has the full text.
+ .
+ Additional permission under GNU GPL version 3 section 7
+ .
+ If you modify this Program, or any covered work, by linking or combining
+ it with the OpenSSL library (or a modified version of that library),
+ containing parts covered by the terms of the OpenSSL License, the
+ licensors of this Program grant you additional permission to convey
+ the resulting work.
+
+Files: Swift/resources/icons/check.png
+Copyright:
+ 2005, 2007 Gregory Maxwell
+ 2014 Sarang
+Comment: https://en.wikipedia.org/wiki/File:Green_check.svg
+License: UCS-Graphic-PD
+ All graphic representations of Unicode characters are in the public domain.
+
+Files: Swift/resources/icons/stop.*
+Copyright:
+ 2007 MagicImage
+ 2009 ESanchez013
+ 2011 Mortalmoth
+ 2011 Sarang
+Comment: https://commons.wikimedia.org/wiki/File:Blank_stop_sign_octagon.svg
+License: trivial-geometric-PD
+ This image of simple geometry is ineligible for copyright
+ and therefore in the public domain,
+ because it consists entirely of information that is common property
+ and contains no original authorship.
+
+Files: Swift/resources/icons/warn.png
+Copyright: 2007 Torrey Rice/Renkoo.6.3
+License: BSD-3-clause
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+   http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, the full text of the Apache License, Version 2.0
+ can be found in the file `/usr/share/common-licenses/Apache-2.0'.
+
+License: BSD-2-clause
+ All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its
+ contributors may be used to endorse or promote products derived
+ from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+License: Trolltech-Demo
+ Use, modification and distribution is allowed without limitation,
+ warranty, liability or support of any kind.
+ 
+License: OFL-1.1
+ -----------------------------------------------------------
+ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+ -----------------------------------------------------------
+ .
+ PREAMBLE
+ The goals of the Open Font License (OFL) are to stimulate worldwide
+ development of collaborative font projects, to support the font
+ creation efforts of academic and linguistic communities, and to
+ provide a free and open framework in which fonts may be shared and
+ improved in partnership with others.
+ .
+ The OFL allows the licensed fonts to be used, studied, modified and
+ redistributed freely as long as they are not sold by themselves. The
+ fonts, including any derivative works, can be bundled, embedded,
+ redistributed and/or sold with any software provided that any reserved
+ names are not used by derivative works. The fonts and derivatives,
+ however, cannot be released under any other type of license. The
+ requirement for fonts to remain under this license does not apply to
+ any document created using the fonts or their derivatives.
+ .
+ DEFINITIONS
+ "Font Software" refers to the set of files released by the Copyright
+ Holder(s) under this license and clearly marked as such. This may
+ include source files, build scripts and documentation.
+ .
+ "Reserved Font Name" refers to any names specified as such after the
+ copyright statement(s).
+ .
+ "Original Version" refers to the collection of Font Software
+ components as distributed by the Copyright Holder(s).
+ .
+ "Modified Version" refers to any derivative made by adding to,
+ deleting, or substituting -- in part or in whole -- any of the
+ components of the Original Version, by changing formats or by porting
+ the Font Software to a new environment.
+ .
+ "Author" refers to any designer, engineer, programmer, technical
+ writer or other person who contributed to the Font Software.
+ .
+ PERMISSION & CONDITIONS
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of the Font Software, to use, study, copy, merge, embed,
+ modify, redistribute, and sell modified and unmodified copies of the
+ Font Software, subject to the following conditions:
+ .
+ 1) Neither the Font Software nor any of its individual components, in
+ Original or Modified Versions, may be sold by itself.
+ .
+ 2) Original or Modified Versions of the Font Software may be bundled,
+ redistributed and/or sold with any software, provided that each copy
+ contains the above copyright notice and this license. These can be
+ included either as stand-alone text files, human-readable headers or
+ in the appropriate machine-readable metadata fields within text or
+ binary files as long as those fields can be easily viewed by the user.
+ .
+ 3) No Modified Version of the Font Software may use the Reserved Font
+ Name(s) unless explicit written permission is granted by the
+ corresponding Copyright Holder. This restriction only applies to the
+ primary font name as presented to the users.
+ .
+ 4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+ Software shall not be used to promote, endorse or advertise any
+ Modified Version, except to acknowledge the contribution(s) of the
+ Copyright Holder(s) and the Author(s) or with their explicit written
+ permission.
+ .
+ 5) The Font Software, modified or unmodified, in part or in whole,
+ must be distributed entirely under this license, and must not be
+ distributed under any other license. The requirement for fonts to
+ remain under this license does not apply to any document created using
+ the Font Software.
+ .
+ TERMINATION
+ This license becomes null and void if any of the above conditions are
+ not met.
+ .
+ DISCLAIMER
+ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+ OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+ OTHER DEALINGS IN THE FONT SOFTWARE.

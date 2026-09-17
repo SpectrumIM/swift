@@ -1,0 +1,117 @@
+swift-im (5.0~alpha2.145.g12d031cf8+dfsg-5) unstable; urgency=medium
+
+  * d/rules: use DEB_BUILD_OPTION_PARALLEL instead nproc (Closes: #1109963)
+    Thanks to Michael Crusoe for the patch!
+  * Drop B-D on oboslete libqt5webkit5-dev.
+
+ -- Tobias Frost <tobi@debian.org>  Sat, 20 Sep 2025 00:08:34 +0200
+
+swift-im (5.0~alpha2.145.g12d031cf8+dfsg-4) unstable; urgency=medium
+
+  * Fix FTBFS with miniupnpc 2.2.8 (Closes: #1076692).
+  * Add patch for a FTBFS issue with GCC 14.
+
+ -- Tobias Frost <tobi@debian.org>  Sat, 03 Aug 2024 09:41:56 +0200
+
+swift-im (5.0~alpha2.145.g12d031cf8+dfsg-3) unstable; urgency=medium
+
+  * Make build reproducible by pre-generating VERSION.swift. Thanks
+    to Vagrant for proposing a fix! (Closes: #1024292)
+  * Fix generated version.h, see patch fix-version-h.patch and d/rules.
+    (Closes: #1024553)
+  * Bump S-V to 4.6.2, no changes.
+  * Bump d/copyright years.
+
+ -- Tobias Frost <tobi@debian.org>  Sat, 04 Feb 2023 14:02:27 +0100
+
+swift-im (5.0~alpha2.145.g12d031cf8+dfsg-2) unstable; urgency=medium
+
+  * No-change source-only upload to build on buildds.
+
+ -- Tobias Frost <tobi@debian.org>  Sun, 23 Oct 2022 19:08:40 +0200
+
+swift-im (5.0~alpha2.145.g12d031cf8+dfsg-1) unstable; urgency=medium
+
+  * Reintroduce Package. (Closes: #1016962)
+  * The package will be maintained in the realms of the XMPP Team.
+  * d/copyright: review and updated
+  * d/control:
+    - Remove uneeded version constraints on B-D.
+    - Rename library package to match upstream SONAME zero.
+    - Point Vcs fields to salsa.
+    - Use https for Upstream field.
+    - Note that rules won't require root privileges.
+    - Update S-V to 4.6.1 -- no changes.
+    - Don't package swift-im. (Scons woni't find QT; as this is packaged
+      for spectrum2, it is also not needed now.)
+  * d/rules:
+    - Rework d/rules / d/clean to get rid of scons in the clean target.
+    - Enable hardening.
+  * Add an customized CI configuration, allowing repotest to fail.
+
+ -- Tobias Frost <tobi@debian.org>  Mon, 17 Oct 2022 14:29:03 +0200
+
+swift-im (4.0.3+dfsg1-1) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * Reintroduce this source package, although building only the
+    swiften library as we need it for the spectrum2 transport
+  * New upstream version
+  * Completely new packaging
+
+ -- Thorsten Glaser <tg@mirbsd.de>  Sun, 26 Apr 2020 20:48:15 +0200
+
+swift-im (3.0.4-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix encoding error in scons Python script. (Closes: #889062)
+  * Fix build on i386 with Qt. (Closes: #840151)
+  * Fix missing dependency on zlib. (Closes: #844879)
+  * Fix build against current miniupnp.
+
+ -- Dominik George <natureshadow@debian.org>  Mon, 20 May 2019 15:14:47 +0200
+
+swift-im (3.0.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Allow compiling with newer boosts. Closes: 810839, 822131
+  * Switch to Qt5 instead of Qt4. Closes: 784532, 745807
+  * Fix some platform detection in build system. Closes: 757554
+  * Rewrite rules file with dh sequencer.
+  * Drop -dbg package.
+
+ -- Kevin Smith <kevin@kismith.co.uk>  Fri, 03 Jun 2016 15:56:20 +0100
+
+swift-im (2.0+dev6-1) unstable; urgency=low
+
+  * Update from upstream.
+  * Don't conflict with libswiften2 overrides. Closes: 726289
+  * Don't conflict with swift-im-dbg overrides. Closes: 726290
+  * Don't conflict with libswiften-dev overrides. Closes: 726291
+
+
+ -- Kevin Smith <kevin@kismith.co.uk>  Mon, 14 Oct 2013 16:42:12 -0000
+
+swift-im (2.0+dev5-1) unstable; urgency=low
+
+  * Update from upstream.
+  * Compiles with boost >= 1.50.0; will build on sid again. Closes: #713725
+  * Include dependencies for libswiften so that other packages
+    can depend on it. Closes: #714902
+
+ -- Kevin Smith <kevin@kismith.co.uk>  Mon, 12 Aug 2013 16:18:09 -0000
+
+swift-im (2.0~beta1+dev47-1) unstable; urgency=low
+
+  * Update from upstream.
+  * Rename /usr/bin/swift binary to not conflict with
+    other package. Closes: #674504
+
+ -- Kevin Smith <kevin@kismith.co.uk>  Tue, 12 Jun 2012 19:25:12 -0000
+
+swift-im (2.0~beta1+dev26-1) unstable; urgency=low
+
+  * Initial release. Closes: #631002
+  * Thanks to Olly Betts <olly@survex.com>
+
+ -- Kevin Smith <kevin@kismith.co.uk>  Wed, 25 Apr 2012 09:55:52 -0000
